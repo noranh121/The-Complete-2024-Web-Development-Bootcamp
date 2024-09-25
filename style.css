@@ -6,30 +6,31 @@ body {
 .project-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 50px 100px 1000px 10px;
+    grid-template-rows: 100px 50px 100px 1000px 10px;
     height: 100vh;
 }
 
 h1 {
     color: #55679C;
-    font-size: 7rem;
+    font-size: 5rem;
     font-family: satisfy;
     justify-self: center;
     margin-bottom: 0%;
     grid-column-start: 2;
     grid-column-end: 5;
+    grid-row-end: 1;
 }
 
 h3 {
     color: #1E2A5E;
-    grid-row-start: 2;
+    grid-row: span 2;
     grid-column: span 5;
     justify-self: center;
     font-family: Roboto;
 }
 
 .links {
-    grid-row-start: 4;
+    grid-row: span 4;
     grid-column-start: 2;
     font-size: 2rem;
 }
@@ -41,11 +42,19 @@ ol li {
 
 .icons {
     gap: 5px;
-    grid-row: 1;
+    grid-row-end: 1;
     grid-column-start: 5;
     justify-self: right;
 }
 
-@media (max-width: 1250px) {
-    /* TO DO */
+.icons a img {
+    width: 70px;
+    height: 70px;
+}
+
+@media (max-width: 500px) {
+    .icons a img {
+        width: 50px;
+        height: 50px;
+    }
 }
